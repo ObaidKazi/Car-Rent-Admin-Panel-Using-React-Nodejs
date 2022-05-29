@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Row, Col, Box } from 'adminlte-2-react';
 import { LoginContext } from '../../context/loginContext';
 import { environment } from '../../constant';;
@@ -7,6 +7,8 @@ import { environment } from '../../constant';;
 
 function Login() {
     const { setToken } = useContext(LoginContext);
+    const [isError,setIsError]=useState(false);
+    const [errorMsg,setErrorMsg]=useState('');
     const submit = (event) => {
         event.preventDefault();
         if (event.target[0].value === null || event.target[0].value === '' || event.target[1].value === null || event.target[1].value === '') {
@@ -24,8 +26,17 @@ function Login() {
         };
         fetch(environment.apiPrefix + '/login', requestOptions).then((response) => response.json())
             .then((content) => {
-                setToken(content.success.token);
-                console.log(content.success);
+                if(content.error){
+                    setIsError(true);
+                    setErrorMsg(content.error);
+                    setTimeout(()=>{
+                        setIsError(false);
+                    },4000)
+                    
+                    
+                }else{
+                    setToken(content.success.token);
+                }
             });
     }
     return (
@@ -53,6 +64,7 @@ function Login() {
                                 </Col>
 
                             </Row>
+                            {isError?<p className='text-danger'>{errorMsg}</p>:<></>}
                             <Row >
                                 <Col >
                                     <center>

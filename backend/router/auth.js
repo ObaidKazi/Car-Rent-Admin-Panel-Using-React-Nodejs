@@ -21,7 +21,7 @@ router.post('/login', async function (req, res) {
                     'success': data
                 });
             } else {
-                return res.status(203).send({ 'success': 'invalid password' });
+                return res.status(203).send({ 'error': 'invalid password' });
             }
         } else {
             return res.status(404).send({ 'error': 'user not found' });
