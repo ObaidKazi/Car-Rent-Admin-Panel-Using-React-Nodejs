@@ -18,7 +18,7 @@ router.get('/getNewBookings', async function (req, res) {
     try {
         //getting new booking by checking today date from end_date
         const bookings = await Booking.findAll({
-            where: { 'end_at': { [Op.lt]: Date.now() } }, include: [{
+            where: { 'end_at': { [Op.gt]: moment().unix() } }, include: [{
                 model: CustomerAddress,
                 as: 'pickUpAddress',
             }, {

@@ -29,7 +29,7 @@ function Booked() {
 
     },
     {
-      field: 'contact_number', headerName: 'Contact Number', width: 100, valueGetter: (params) =>
+      field: 'contact_number', headerName: 'Contact Number', width: 130, valueGetter: (params) =>
         `${params.row.customerInfo.contact_number || ''}`,
     },
     {
@@ -46,7 +46,7 @@ function Booked() {
       headerName: 'Start Time',
       width: 150,
       valueGetter: (params) =>
-        `${new Date(params.row.start_at * 1).toLocaleDateString("en-US")}`,
+        `${new Date(params.row.start_at * 1000).toDateString()}`,
 
     },
     {
@@ -54,7 +54,7 @@ function Booked() {
       headerName: 'End Time',
       width: 150,
       valueGetter: (params) =>
-        `${new Date(params.row.end_at * 1000).toLocaleDateString("en-US")}`,
+        `${new Date(params.row.end_at * 1000).toDateString()}`,
 
     },
     {
