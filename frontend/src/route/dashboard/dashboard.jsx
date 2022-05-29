@@ -9,7 +9,7 @@ import Owner from '../owner/owner';
 import { LoginContext } from '../../context/loginContext';
 import { useContext } from 'react';
 import CheckAvailable from '../available/availability';
-const {  Entry} = Navbar;
+const { Entry } = Navbar;
 
 
 
@@ -18,20 +18,20 @@ function Dashboard() {
     return (
         <>
             <AdminLTE sidebar={sidebar} footer={<Footer includeVersionInfo={false} >Socar</Footer>} >
-            <Users path='/users' key={'user'}></Users>
-            <Booked path='/booked' key={'booked'}></Booked>
-            <CheckAvailable path='/available' key={'available'}></CheckAvailable>
-            <Owner path='/owner/:id' key={'owner'}></Owner>
-            <Cars path='/' key={'car'}></Cars>
-            
-            
-            <Navbar.Core>
-                    
+                <Users path='/users' key={'user'}></Users>
+                <Booked path='/booked' key={'booked'}></Booked>
+                <CheckAvailable path='/available' key={'available'}></CheckAvailable>
+                <Owner path='/owner/:id' key={'owner'}></Owner>
+                <Cars path='/' key={'car'}></Cars>
+
+
+                <Navbar.Core>
+
                     <Entry
                         icon="fas-power-off"
-                        onClick={()=>{
+                        onClick={() => {
                             setToken(null);
-                        }} 
+                        }}
                     >
 
                     </Entry>
@@ -39,8 +39,8 @@ function Dashboard() {
 
 
                 </Navbar.Core>
-                
-                
+
+
             </AdminLTE>
         </>
     )

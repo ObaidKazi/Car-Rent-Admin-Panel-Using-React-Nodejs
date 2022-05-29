@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Row, Col,Box } from 'adminlte-2-react';
+import { Row, Col, Box } from 'adminlte-2-react';
 import { LoginContext } from '../../context/loginContext';
 import { environment } from '../../constant';;
 
@@ -25,44 +25,44 @@ function Login() {
         fetch(environment.apiPrefix + '/login', requestOptions).then((response) => response.json())
             .then((content) => {
                 setToken(content.success.token);
-                    console.log(content.success);
+                console.log(content.success);
             });
     }
     return (
         <>
             <form onSubmit={submit}>
                 <Row>
-                <div style={{marginLeft: 'auto',marginTop:'20%' ,width:'65%',padding: '10px'}}>
-                   <Box style={{width:'400px',padding:'10px'}}>
-                      <center><h2>Login</h2> </center>
-                   <Row >
-                        <Col >
-                            <div className="form-group">
-                                <label htmlFor="exampleInputPassword1">Email</label>
-                                <input type="email" name="email"  className='form-control' required />
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row >
-                        <Col >
-                            <div className="form-group">
-                                <label htmlFor="exampleInputPassword1">Password</label>
-                                <input type="password" name="password" className='form-control' required />
-                            </div>
+                    <div style={{ marginLeft: 'auto', marginTop: '20%', width: '65%', padding: '10px' }}>
+                        <Box style={{ width: '400px', padding: '10px' }}>
+                            <center><h2>Login</h2> </center>
+                            <Row >
+                                <Col >
+                                    <div className="form-group">
+                                        <label htmlFor="exampleInputPassword1">Email</label>
+                                        <input type="email" name="email" className='form-control' required />
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row >
+                                <Col >
+                                    <div className="form-group">
+                                        <label htmlFor="exampleInputPassword1">Password</label>
+                                        <input type="password" name="password" className='form-control' required />
+                                    </div>
 
-                        </Col>
+                                </Col>
 
-                    </Row>
-                    <Row >
-                        <Col >
-                            <center>
-                            <input type="submit" name="submit" className='btn btn-primary' style={{ marginTop: '25px' }} />
-                            </center>
-                        </Col>
+                            </Row>
+                            <Row >
+                                <Col >
+                                    <center>
+                                        <input type="submit" name="submit" className='btn btn-primary' style={{ marginTop: '25px' }} />
+                                    </center>
+                                </Col>
 
-                    </Row>
-                   </Box>
-                </div>
+                            </Row>
+                        </Box>
+                    </div>
                 </Row>
                 <br></br>
             </form>
