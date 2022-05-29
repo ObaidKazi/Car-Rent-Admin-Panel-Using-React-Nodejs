@@ -6,6 +6,7 @@ npm update of frontend folder terminal
 npm update of backend folder terminal
 <br>
 <br>
+<br>
 add database name socar in phpmyadmin
 <br>
 <br>
