@@ -32,3 +32,14 @@ run command "npm start" in frontend terminal
 <br>
 <br>
 run command "nodemon" in backend terminal
+<br>
+<br>
+<br>
+login credential
+<br>
+<br>
+<br>
+email:admin@gmail.com
+<br>
+<br>
+password:12345
