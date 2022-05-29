@@ -7,7 +7,7 @@ npm update of backend folder terminal
 <br>
 <br>
 <br>
-add database name socar in phpmyadmin
+add database name <b>socar</b> in phpmyadmin
 <br>
 <br>
 <br>
