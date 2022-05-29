@@ -5,7 +5,7 @@ module.exports = {
         return queryInterface.bulkInsert('bookings', [
             {
                 car_id: '1',
-                start_at: moment(Date.now()).unix(),
+                start_at: moment().unix(),
                 end_at: moment().add(4, 'day').unix(),
                 pickup_id: 1,
                 drop_id: 2,
@@ -28,7 +28,7 @@ module.exports = {
             },
             {
                 car_id: '3',
-                start_at: moment(Date.now()).unix(),
+                start_at: moment().unix(),
                 end_at: moment().add(7, 'day').unix(),
                 pickup_id: 5,
                 drop_id: 6,
@@ -39,7 +39,7 @@ module.exports = {
             },
             {
                 car_id: '4',
-                start_at: moment(Date.now()).unix(),
+                start_at: moment().unix(),
                 end_at: moment().add(1, 'day').unix(),
                 pickup_id: 7,
                 drop_id: 8,
@@ -49,7 +49,7 @@ module.exports = {
                 updatedAt: new Date()
             }, {
                 car_id: '5',
-                start_at: moment(Date.now()).unix(),
+                start_at: moment().unix(),
                 end_at: moment().add(3, 'day').unix(),
                 pickup_id: 9,
                 drop_id: 10,
@@ -72,7 +72,7 @@ module.exports = {
             ,
             {
                 car_id: '6',
-                start_at: moment(Date.now()).unix(),
+                start_at: moment().unix(),
                 end_at: moment().add(2, 'day').unix(),
                 pickup_id: 11,
                 drop_id: 12,
@@ -84,7 +84,7 @@ module.exports = {
             ,
             {
                 car_id: '7',
-                start_at: moment(Date.now()).unix(),
+                start_at: moment().unix(),
                 end_at: moment().add(5, 'day').unix(),
                 pickup_id: 13,
                 drop_id: 14,
