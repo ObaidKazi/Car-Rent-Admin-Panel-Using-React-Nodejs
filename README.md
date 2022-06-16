@@ -3,6 +3,10 @@ npm update of frontend folder terminal
 <br>
 <br>
 <br>
+install sequelize cli package globally
+<br>
+<br>
+<br>
 npm update of backend folder terminal
 <br>
 <br>
