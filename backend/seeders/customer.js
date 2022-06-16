@@ -4,10 +4,10 @@ module.exports = {
         return queryInterface.bulkInsert('customers', [
             {
                 id: 1,
-                first_name: 'Obaid',
-                last_name: 'Kazi',
-                contact_number: '7208337371',
-                email: 'obaidkazi@gmail.com',
+                first_name: 'james',
+                last_name: 'bond',
+                contact_number: '8009337371',
+                email: 'jamesbond@gmail.com',
                 password: '$2b$10$qSYKIsosFTaLnfCJ79n/b.lr2pdAVrZgDDtymd2Gf9Sgr.7EmFtXe',
                 createdAt: new Date(),
                 updatedAt: new Date(),
